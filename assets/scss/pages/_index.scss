@@ -1,0 +1,117 @@
+.hot-topic {
+  position: relative;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gray-600;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  &:hover::after {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+}
+
+.hito-content {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 217px;
+    height: 76px;
+    background-image: url("/assets/images/bg-1.png");
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    display: block;
+    width: 300px;
+    height: 188px;
+    background-image: url("/assets/images/bg-2.png");
+    @media (max-width: 992px) {
+      right: -32px;
+      bottom: 0;
+      width: 110px;
+      height: 98px;
+      background-image: url("/assets/images/bg-2-sm.png");
+    }
+  }
+}
+// .swiper-pagination {
+//   width: 232px;
+//   position: relative;
+// }
+.swiper-pagination::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background-color: #6c757d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-prev:hover,
+.swiper-next:hover {
+  background-color: #6c757d;
+  color: #dee2e6;
+}
+.swiper-button-disabled {
+  color: #dee2e6;
+  border-color: #dee2e6 !important;
+}
+.swiper-button-disabled:hover {
+  cursor: default;
+  background-color: initial !important;
+}
+.nav-link:hover {
+  color: #569573;
+}
+.text li a:hover {
+  color: #569573;
+}
+.nav-pills .nav-link.active {
+  color: #212529;
+  background-color: #e0efde;
+}
+.tab-content {
+  li {
+    list-style-type: none;
+  }
+}
+// 不會改gap，最小只有.5rem，先這樣寫
+.tab-pane .img {
+  gap: 4px;
+}
+.tab-pane .img li:first-child img {
+  border-radius: 20px 0 0 20px;
+}
+.tab-pane .img li:last-child img {
+  border-radius: 0 20px 20px 0;
+}
+.tab-section-footer li a:hover {
+  color: #ffffff;
+  background-color: #6e6b67;
+}
+.top-decorate {
+  left: 16px;
+  transform: translateY(-50%);
+}

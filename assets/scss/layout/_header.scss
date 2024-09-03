@@ -1,0 +1,32 @@
+.navbar {
+  h1 {
+    a {
+      background-image: url(/assets/images/Vector.svg);
+      background-repeat: no-repeat;
+      width: 96px;
+      height: 28px;
+      display: block;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .collapse {
+    @media (max-width: 992px) {
+      height: 100vh;
+    }
+  }
+}
+.search {
+  width: 276px;
+  @media (max-width: 992px) {
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+.btn-login {
+  @media (max-width: 992px) {
+    padding-top: 24px;
+    width: 100%;
+  }
+}
